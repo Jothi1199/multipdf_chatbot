@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-community
+langchain-text-splitters
+chromadb
+sentence-transformers
+pypdf
+transformers==4.41.2
