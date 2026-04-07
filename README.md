@@ -1,64 +1,97 @@
-# Multi-PDF Chatbot
+# Multi-Document RAG Chatbot
 
 An AI-powered chatbot that allows users to ask questions from multiple PDF documents using Retrieval-Augmented Generation (RAG).
 
 ---
 
-## Features
+##  Highlights
 
+- Semantic search using embeddings (not keyword-based)
 - Supports multiple PDF documents
-- Semantic search using embeddings
-- Question Answering using Hugging Face models
-- Retrieval-Augmented Generation (RAG)
+- Uses QA model to extract precise answers
+- Chunk-level retrieval + best answer selection
+- Displays source context for transparency
 - Interactive UI built with Streamlit
-- Displays source context for answers
 
 ---
 
-## Tech Stack
+## Demo
 
+(Add your screenshot here)
+
+Example:
+![App Screenshot](screenshot.png)
+
+---
+
+## How It Works
+
+```text
+PDF Documents
+     ↓
+Text Chunking
+     ↓
+Embeddings (Sentence Transformers)
+     ↓
+Vector Database (ChromaDB)
+     ↓
+Retriever (MMR Search)
+     ↓
+QA Model (Hugging Face)
+     ↓
+Final Answer + Source
+```
+
+## Features
+- Ask questions from multiple documents
+- Accurate answers using context retrieval
+- Works across different domains (resume, reports, etc.)
+- Displays relevant source content
+- Handles large documents efficiently
+
+## Tech Stack
 - Python
 - Streamlit
 - LangChain
-- ChromaDB (Vector Database)
+- ChromaDB
 - Hugging Face Transformers
 - Sentence Transformers
-
----
 
 ## Project Structure
 multipdf_chatbot/
 │
 ├── app.py
-├── data/ # PDF files
+├── data/              # Add your PDF files here
 ├── requirements.txt
 └── README.md
 
-## Example Questions:
-
-1. What are the skills mentioned?
-2. Where is the person working?
-3. What is the total experience?
-4. What technologies are used?
-
-
-## How It Works:
-
-1. Loads multiple PDF documents
-2. Splits text into chunks
-3. Converts text into embeddings
-4. Stores embeddings in ChromaDB
-5. Retrieves relevant chunks based on query
-6. Uses a QA model to extract answers
-
 ## Installation
-
-```bash
-git clone https://github.com/your-username/multipdf_chatbot.git
+```
+git clone https://github.com/Jothi1199/multipdf_chatbot.git
 cd multipdf_chatbot
 pip install -r requirements.txt
-
 ```
 
-##  Run
+## Run the App
+```
 streamlit run app.py
+```
+
+## Example Questions
+- Where is the person working?
+- What is the total experience?
+- when she got ERS Process champion award?
+- what is the role?
+
+## Notes
+- Place your PDF files inside the /data folder
+- Works best with fact-based questions (not yes/no questions)
+
+## Future Improvements
+- FastAPI backend integration
+- Docker deployment
+- Chat history (memory)
+- Better LLM-based responses (FLAN / GPT)
+
+## Author
+Anandha Jothi S
