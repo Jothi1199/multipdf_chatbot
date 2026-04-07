@@ -1,4 +1,4 @@
-# Multi-Document RAG Chatbot
+# MultiPDF Chatbot Using RAG
 
 An AI-powered chatbot that allows users to ask questions from multiple PDF documents using Retrieval-Augmented Generation (RAG).
 
@@ -16,8 +16,6 @@ An AI-powered chatbot that allows users to ask questions from multiple PDF docum
 ---
 
 ## Demo
-
-(Add your screenshot here)
 
 Example:
 ![App Screenshot](screenshot.png)
